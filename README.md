@@ -36,5 +36,4 @@ This is a simple rails app that implements a Form using both plain HTML and rail
 
 ## Acknowledgments
 
-
 - [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms)
