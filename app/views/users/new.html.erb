@@ -32,6 +32,19 @@
 <%#   <%= submit_tag 'Submit' %1> %>
 <%# <% end %1> %>
 
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <%= pluralize(@user.errors.count), 'error') %> prohibited this form from
+    being submited.
+  </div>
+
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for(@user) do |f| %>
   <p>
     <%= f.label :username, 'Your email' %>
