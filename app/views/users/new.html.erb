@@ -13,21 +13,40 @@
 <%#   <button type="submit" name="commit" value="Submit"></button> %>
 <%# </form> %>
 
-<%= form_tag('/users') do %>
+<%# <%= form_tag('/users') do %1> %>
+<%#   <p> %>
+<%#     <%= label_tag :username, 'Username' %1> %>
+<%#     <%= text_field_tag :username %1> %>
+<%#   </p> %>
+
+<%#   <p> %>
+<%#     <%= label_tag :email, 'Email' %1> %>
+<%#     <%= email_field_tag :email %1> %>
+<%#   </p> %>
+
+<%#   <p> %>
+<%#     <%= label_tag :password, 'Password' %1> %>
+<%#     <%= password_field_tag :password %1> %>
+<%#   </p> %>
+
+<%#   <%= submit_tag 'Submit' %1> %>
+<%# <% end %1> %>
+
+<%= form_for(@user) do |f| %>
   <p>
-    <%= label_tag :username, 'Username' %>
-    <%= text_field_tag :username %>
+    <%= f.label :username, 'Your email' %>
+    <%= f.text_field :username, placeholder: 'John Doe' %>
   </p>
 
   <p>
-    <%= label_tag :email, 'Email' %>
-    <%= email_field_tag :email %>
+    <%= f.label :email, 'Your email' %>
+    <%= f.email_field :email, placeholder: 'example@mail.net' %>
   </p>
 
   <p>
-    <%= label_tag :password, 'Password' %>
-    <%= password_field_tag :password %>
+    <%= f.label :password, 'Your password' %>
+    <%= f.password_field :password %>
   </p>
 
-  <%= submit_tag 'Submit' %>
+  <%= f.submit 'Submit' %>
 <% end %>
