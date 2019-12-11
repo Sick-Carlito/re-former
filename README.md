@@ -17,7 +17,7 @@ such view helper methods can be found in the
 
 From your terminal, issues the following commands **as a regular user**.
 
-```console
+```shell
 git clone --single-branch --branch feature/form \
 https://github.com/Sick-Carlito/re-former.git && \
 cd re-former && yarn install --check-files && bundle install && \
