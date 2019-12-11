@@ -2,7 +2,8 @@
 
 This is a simple rails app that implements a HTML forms using both vanilla HTML
 and **Rails form helpers**, i.e, `form_tag` and `form_for`, further information on
-such view helper methods can be found in the [rails API](https://api.rubyonrails.org/v6.0.1/classes/ActionView/Helpers/FormHelper.html)
+such view helper methods can be found in the
+[rails API](https://api.rubyonrails.org/v6.0.1/classes/ActionView/Helpers/FormHelper.html).
 
 ## Requirements
 
@@ -19,12 +20,13 @@ From your terminal, issues the following commands **as a regular user**.
 ```console
 git clone --single-branch --branch feature/form \
 https://github.com/Sick-Carlito/re-former.git && \
-cd re-former && bundle install && yarn install --check-files && \
+cd re-former && yarn install --check-files && bundle install && \
 rails db:migrate:reset && rails server
 ```
 
-Now visit `http://localhost:3000/` to watch the rendered forms, all the code
-to create the forms is inside `app/views/users/new.html.erb`.
+Now visit `http://localhost:3000/` to watch a list of users (should be empty).
+Click on the **New user** link to be redirected to the form for creating a new
+user. The code for the form is inside `app/views/users/new.html.erb`.
 
 ## Authors
 
@@ -34,4 +36,5 @@ to create the forms is inside `app/views/users/new.html.erb`.
 
 ## Acknowledgments
 
+- [Microverse](https://www.microverse.org/)
 - [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/forms)
