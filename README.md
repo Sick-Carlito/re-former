@@ -1,32 +1,30 @@
 # re-former
 
-This is a simple rails app that implements a Form using both plain HTML and rails' form helpers
+This is a simple rails app that implements a HTML forms using both vanilla HTML
+and **Rails form helpers**, i.e, `form_tag` and `form_for`, further information on
+such view helper methods can be found in the [rails API](https://api.rubyonrails.org/v6.0.1/classes/ActionView/Helpers/FormHelper.html)
 
-## Things you may want to cover:
-- The MVC parttern
-- Forms
+## Requirements
 
+- `ruby` 2.6.3
+- `rails` 6.0.1
+- `bundler` 2.0.2
+- `yarn` 1.19.2
+- `sqlite3` 3.27.2
 
+## Setup
 
-### What you need:
+From your terminal, issues the following commands **as a regular user**.
 
-- Ruby 2.6.5
-- Rails 6.0.1
-- sqlite3 3.27.2
+```console
+git clone --single-branch --branch feature/form \
+https://github.com/Sick-Carlito/re-former.git && \
+cd re-former && bundle install && yarn install --check-files && \
+rails db:migrate:reset && rails server
+```
 
-
-###  Cloning and deployment 
-
-1. Open the terminal.
-
-2. Enter git clone https://github.com/Sick-Carlito/re-former
-
-3. Navigate to the cloned repository.
-
-4. Enter command "rails console" to start the backend 
-
-
-### ...
+Now visit `http://localhost:3000/` to watch the rendered forms, all the code
+to create the forms is inside `app/views/users/new.html.erb`.
 
 ## Authors
 
