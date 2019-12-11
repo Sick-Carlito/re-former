@@ -1,6 +1,6 @@
 # re-former
 
-This is a simple rails app that implements a HTML forms using both vanilla HTML
+This is a Rails app that implements a HTML forms using both vanilla HTML
 and **Rails form helpers**, i.e, `form_tag` and `form_for`, further information on
 such view helper methods can be found in the
 [rails API](https://api.rubyonrails.org/v6.0.1/classes/ActionView/Helpers/FormHelper.html).
@@ -15,7 +15,7 @@ such view helper methods can be found in the
 
 ## Setup
 
-From your terminal, issues the following commands **as a regular user**.
+From your terminal, issue the following commands **as a regular user**.
 
 ```shell
 git clone --single-branch --branch feature/form \
