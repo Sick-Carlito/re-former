@@ -1,0 +1,14 @@
+<h1>Your user info</h1>
+
+<p>
+  <strong>Username</strong>: <%= @user.username %>
+</p>
+
+<p>
+  <strong>Email</strong>: <%= @user.email %>
+</p>
+
+<p>Your password is not showed for security reasons.</p>
+
+<%= link_to 'Users list', root_path %>
+<%= link_to 'Edit user', edit_user_path(@user) %>

@@ -34,7 +34,7 @@
 
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <%= pluralize(@user.errors.count), 'error') %> prohibited this form from
+    <%= pluralize(@user.errors.count, 'error') %> prohibited this form from
     being submited.
   </div>
 
@@ -45,9 +45,9 @@
   </ul>
 <% end %>
 
-<%= form_for(@user) do |f| %>
+<%= form_for @user do |f| %>
   <p>
-    <%= f.label :username, 'Your email' %>
+    <%= f.label :username, 'Your name' %>
     <%= f.text_field :username, placeholder: 'John Doe' %>
   </p>
 
