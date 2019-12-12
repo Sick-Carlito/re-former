@@ -1,0 +1,65 @@
+<%# <form accept-charset="UTF-8" method="post" action="/users"> %>
+<%#   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %1>"> %>
+
+<%#   <label for="user_name">Username</label> %>
+<%#   <input type="text" name="user[username]" id="user_name"> %>
+
+<%#   <label for="user_email">Email</label> %>
+<%#   <input type="email" name="user[email]" id="user_email"> %>
+
+<%#   <label for="user_password">Password</label> %>
+<%#   <input type="password" name="user[password]" id="user_password"> %>
+
+<%#   <button type="submit" name="commit" value="Submit"></button> %>
+<%# </form> %>
+
+<%# <%= form_tag('/users') do %1> %>
+<%#   <p> %>
+<%#     <%= label_tag :username, 'Username' %1> %>
+<%#     <%= text_field_tag :username %1> %>
+<%#   </p> %>
+
+<%#   <p> %>
+<%#     <%= label_tag :email, 'Email' %1> %>
+<%#     <%= email_field_tag :email %1> %>
+<%#   </p> %>
+
+<%#   <p> %>
+<%#     <%= label_tag :password, 'Password' %1> %>
+<%#     <%= password_field_tag :password %1> %>
+<%#   </p> %>
+
+<%#   <%= submit_tag 'Submit' %1> %>
+<%# <% end %1> %>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <%= pluralize(@user.errors.count, 'error') %> prohibited this form from
+    being submited.
+  </div>
+
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :username, 'Your name' %>
+    <%= f.text_field :username, placeholder: 'John Doe' %>
+  </p>
+
+  <p>
+    <%= f.label :email, 'Your email' %>
+    <%= f.email_field :email, placeholder: 'example@mail.net' %>
+  </p>
+
+  <p>
+    <%= f.label :password, 'Your password' %>
+    <%= f.password_field :password %>
+  </p>
+
+  <%= f.submit 'Submit' %>
+<% end %>
